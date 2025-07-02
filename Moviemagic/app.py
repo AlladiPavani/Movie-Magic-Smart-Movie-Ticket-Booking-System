@@ -12,11 +12,11 @@ app = Flask(__name__)
 app.secret_key = 'your_static_secret_key_here'  # Replace with your own secret string
 
 # AWS Configuration - read from environment variables for security
-AWS_REGION = os.environ.get('AWS_REGION', 'ap-south-1')
+AWS_REGION = os.environ.get('AWS_REGION', 'us-east-1')
 
 # Fix the SNS_TOPIC_ARN assignment - this was the main issue
 # Instead of using os.environ.get with the ARN as the key, set it directly
-SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:194722438347:MovieTicketNotifications'
+SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:976193227152:MovieTicketNotifications'
 
 # Initialize AWS services with proper credentials handling
 # On EC2, this will use the instance profile/role automatically
